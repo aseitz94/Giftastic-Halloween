@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 var topics = ["halloween", "jack-o-lanterns", "witches", "ghosts", "monsters"]
 
 // Function for buttons
@@ -21,8 +22,7 @@ function renderButtons() {
 }
 renderButtons()
 
-$("button").on("click", function () {
-
+function generateGifs(){
     var choices = $(this).attr("data-choices");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         choices + "&api_key=SrVjxeVTjet5ETJi5XiXxSADyYPTZ4XH&limit=10&rating=pg";
@@ -35,7 +35,7 @@ $("button").on("click", function () {
         .then(function (response) {
 
             var results = response.data;
-            console.log(results)
+           
             for (var i = 0; i < results.length; i++) {
                 var gifDiv = $("<div>");
 
@@ -57,7 +57,7 @@ $("button").on("click", function () {
             }
 
             $(".gif").on("click", function () {
-                console.log(".gif")
+            
                 var state = $(this).attr("data-state");
                 if (state === "still") {
                     $(this).attr("src", $(this).attr("data-animate"))
@@ -70,9 +70,18 @@ $("button").on("click", function () {
                 }
             });
         });
-});
+}
 
+$("button").on("click", generateGifs())
+//on click for new spooky themes
+$("#add-gif").on("click", function(event){
+    event.preventDefault();
+    var newTheme = $("#gif-input").val().trim();
+    topics.push(newTheme)
 
+    renderButtons()
+})
+$(document).on("click", ".choices", generateGifs)
 
 
 })
