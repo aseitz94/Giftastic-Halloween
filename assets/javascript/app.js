@@ -72,7 +72,7 @@ function generateGifs(){
         });
 }
 
-$("button").on("click", generateGifs())
+$("button").on("click", generateGifs)
 //on click for new spooky themes
 $("#add-gif").on("click", function(event){
     event.preventDefault();
