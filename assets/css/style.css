@@ -1,0 +1,19 @@
+body{
+    background: url(https://allfreedesigns.com/wp-content/uploads/2015/09/halloween-background-5.jpg)
+}
+
+#addButton{
+padding: 20px;
+}
+
+#add-gif{
+    margin-left:100px;
+    margin-top: 5px;
+
+}
+
+.choices{
+    margin: 5px;
+    background-color: orange;
+
+}
