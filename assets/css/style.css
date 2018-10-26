@@ -2,18 +2,42 @@ body{
     background: url(https://allfreedesigns.com/wp-content/uploads/2015/09/halloween-background-5.jpg)
 }
 
-#addButton{
-padding: 20px;
+.header{
+    background: orange;
+}
+.container{
+    margin-top:30px;
+}
+
+.main-content{
+    margin-top:15px;
+    background: orange;
+}
+
+#gif-form{
+    margin-left: 75px;
+}
+#gif-input{
+    margin-left: 50px;
 }
 
 #add-gif{
     margin-left:100px;
     margin-top: 5px;
-
 }
 
 .choices{
     margin: 5px;
     background-color: orange;
+    border-color: black;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
 
+}
+
+.gif-style{
+    flex-wrap: wrap;
 }
