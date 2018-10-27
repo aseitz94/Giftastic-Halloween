@@ -9,21 +9,30 @@ body{
     margin-top:30px;
 }
 
+
 .main-content{
     margin-top:15px;
     background: orange;
 }
 
 #gif-form{
-    margin-left: 75px;
+    margin-left: 55px;
 }
 #gif-input{
-    margin-left: 50px;
+    margin-left: 45px;
+   
 }
 
+label{
+    font-weight: bold;
+}
 #add-gif{
     margin-left:100px;
     margin-top: 5px;
+    background: black;
+    color:white;
+    border: none;
+    padding: 5px 10px;
 }
 
 .choices{
